@@ -75,7 +75,8 @@
   .card{display:flex;flex-direction:column}
   .card .ph{aspect-ratio:4/5;overflow:hidden;background:var(--paper-2)}
   .card.wide{grid-column:span 2}
-  .card.wide .ph{aspect-ratio:auto;flex:1;min-height:0}
+  .card.wide .ph{aspect-ratio:auto;flex:1;min-height:0;position:relative}
+  .card.wide .ph img{position:absolute;inset:0}
   .card img{transition:transform .8s cubic-bezier(.2,.7,.2,1)}
   .card:hover img{transform:scale(1.035)}
   .card .meta{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-top:14px;border-top:1px solid var(--ink);margin-top:14px}
@@ -206,6 +207,8 @@
         <a class="card fade" data-c="storage" data-name="Wardrobe with drawers"><div class="ph"><img src="img/wardrobe-drawers.jpg" alt="Wardrobe with pull-out drawers and shelves" loading="lazy"></div><div class="meta"><div><h3 class="serif">Wardrobe, drawers</h3><p class="sub">Two drawers · lockable</p></div><span class="ask">Enquire →</span></div></a>
         <a class="card fade" data-c="beds" data-name="Emerald bed"><div class="ph"><img src="img/bed-emerald-side.jpg" alt="Emerald green bed seen from the side" loading="lazy"></div><div class="meta"><div><h3 class="serif">Emerald, side view</h3><p class="sub">Geometric footboard</p></div><span class="ask">Enquire →</span></div></a>
         <a class="card fade" data-c="storage" data-name="Two-door wardrobe"><div class="ph"><img src="img/wardrobe-closed.jpg" alt="Closed two-door sliding wardrobe" loading="lazy"></div><div class="meta"><div><h3 class="serif">Two-door wardrobe</h3><p class="sub">Brass handles</p></div><span class="ask">Enquire →</span></div></a>
+        <a class="card fade" data-c="storage" data-name="Two-tier cabinet"><div class="ph"><img src="img/cabinet-tiered.jpg" alt="Two-tier oak and white cabinet" loading="lazy"></div><div class="meta"><div><h3 class="serif">Two-tier cabinet</h3><p class="sub">Oak &amp; white</p></div><span class="ask">Enquire →</span></div></a>
+        <a class="card wide fade" data-c="storage" data-name="Bookshelves"><div class="ph"><img src="img/bookshelves.jpg" alt="Tall grey and mustard bookshelves" loading="lazy"></div><div class="meta"><div><h3 class="serif">Bookshelves</h3><p class="sub">Grey with mustard backing</p></div><span class="ask">Enquire →</span></div></a>
       </div>
     </div>
   </section>

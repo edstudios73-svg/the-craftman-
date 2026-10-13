@@ -22,7 +22,7 @@
 <meta name="twitter:image" content="https://the-craftmen-furniture-mcdan.vercel.app/og.jpg">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="theme-color" content="#efeff0">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23111111'/%3E%3Ctext x='16' y='21' font-family='Arial' font-weight='700' font-size='13' fill='%23fff' text-anchor='middle'%3ECM%3C/text%3E%3C/svg%3E">
+<link rel="icon" type="image/png" href="img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -56,6 +56,9 @@
 
   /* header */
   .top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .brand{display:flex;align-items:center;gap:12px;min-width:0}
+  .mark{width:48px;height:48px;border-radius:16px;background:#fff;display:grid;place-items:center;flex:none}
+  .mark img{width:30px;height:auto}
   .loc small{display:block;font-size:12px;color:var(--muted)}
   .loc a{display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:16px}
   .loc a svg{width:18px;height:18px;color:var(--green)}
@@ -228,11 +231,12 @@
   .mcol:nth-child(2) div:last-child{flex:1.25}
   .mcol:nth-child(1) div{animation-delay:.08s}.mcol:nth-child(3) div{animation-delay:.16s}
   @keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
-  .splash::after{content:"";position:absolute;left:0;right:0;bottom:0;height:64%;background:linear-gradient(180deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.85) 38%,#fff 58%);pointer-events:none;z-index:1}
+  .splash::after{content:"";position:absolute;left:0;right:0;bottom:0;height:70%;background:linear-gradient(180deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.88) 36%,#fff 54%);pointer-events:none;z-index:1}
   .sp-body{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:0 28px max(28px,env(safe-area-inset-bottom));text-align:center}
   .sp-body small{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
-  .sp-body h1{font-size:30px;line-height:1.2;font-weight:700;letter-spacing:-.01em}
-  .sp-body p{color:var(--muted);font-size:14px;max-width:290px;margin:12px auto 26px}
+  .sp-body h1{line-height:0}
+  .sp-logo{width:min(250px,70vw);height:auto;margin:0 auto}
+  .sp-body p{color:var(--muted);font-size:14px;max-width:300px;margin:14px auto 24px}
   .sp-body button{width:100%;height:58px;border-radius:18px;background:var(--ink);color:#fff;font-weight:600;font-size:16px}
   @media (min-width:900px){.splash{display:none!important}}
 
@@ -272,22 +276,24 @@
     <div class="mcol"><div><img src="img/t/tv-stand-cream.jpg" alt=""></div><div><img src="img/t/bed-taupe-channel.jpg" alt=""></div><div><img src="img/t/bed-onyx.jpg" alt=""></div></div>
   </div>
   <div class="sp-body">
-    <small>Handmade in Accra</small>
-    <h1>Welcome to<br>The CraftMen</h1>
-    <p>Beds, sofas and storage built in our Kotobabi workshop. Pay on delivery within Accra.</p>
+    <h1><img class="sp-logo" src="img/logo.png" alt="The Craftmen Furniture. Craft. Soul. Legacy."></h1>
+    <p>Welcome! Beds, sofas and storage built by hand in our Kotobabi workshop. Pay on delivery within Accra.</p>
     <button id="spGo">Get started</button>
   </div>
 </div>
 
 <div class="app">
   <header class="top">
+    <div class="brand">
+    <a href="#/" class="mark" aria-label="The Craftmen Furniture home"><img src="img/logo-mark.png" alt=""></a>
     <div class="loc">
-      <small>The CraftMen · Showroom</small>
+      <small>The Craftmen Furniture</small>
       <a href="https://www.google.com/maps/search/?api=1&query=Kotobabi+Abavana+Down+Accra" target="_blank" rel="noopener">
         <svg class="ic" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
         Kotobabi, Accra
         <svg class="ic" viewBox="0 0 24 24" style="width:16px;height:16px;color:var(--ink)"><path d="M6 9l6 6 6-6"/></svg>
       </a>
+    </div>
     </div>
     <a class="round wa-dot" href="https://wa.me/233548269473" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.700 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg></a>
   </header>

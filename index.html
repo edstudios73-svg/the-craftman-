@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The CraftMen Furniture — Accra</title>
+<meta name="description" content="Everything furniture. Custom sofas, beds, wardrobes & TV stands built in Accra. Payment on delivery within Accra. Showroom at Kotobabi Abavana Down.">
+<meta property="og:title" content="The CraftMen Furniture 🇬🇭">
+<meta property="og:description" content="Handmade furniture in Accra. Pay on delivery. Call/WhatsApp 054 826 9473.">
+<meta property="og:image" content="images/sofa-orange.jpg">
+<link rel="icon" href="images/sofa-orange.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#16120f; --bg2:#1f1a16; --card:#2a231d;
+    --ink:#f6efe6; --muted:#b9ab9b;
+    --rust:#d2632a; --gold:#f2b632; --green:#1f8a4c; --red:#ce1126;
+    --radius:22px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;overflow-x:clip}
+  body{background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.55;overflow-x:clip}
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  .wrap{width:min(1180px,100% - 32px);margin-inline:auto}
+  h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;line-height:1.02;letter-spacing:-.02em}
+
+  /* flag stripe */
+  .stripe{height:6px;background:linear-gradient(90deg,var(--red) 0 33.3%,var(--gold) 33.3% 66.6%,var(--green) 66.6%)}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:20;background:rgba(22,18,15,.82);backdrop-filter:blur(12px);border-bottom:1px solid #ffffff12}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .logo{display:flex;align-items:center;gap:10px;font-family:"Bricolage Grotesque";font-weight:800;font-size:20px}
+  .logo img{width:38px;height:38px;border-radius:50%;object-fit:cover;outline:2px solid var(--gold);outline-offset:2px}
+  .navlinks{display:flex;gap:28px;font-weight:500;color:var(--muted)}
+  .navlinks a:hover{color:var(--ink)}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border-radius:999px;font-weight:600;transition:transform .2s,box-shadow .2s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-wa{background:#25d366;color:#08240f;box-shadow:0 10px 30px -10px #25d36699}
+  .btn-ghost{border:1.5px solid #ffffff33}
+  .btn-ghost:hover{border-color:var(--gold)}
+  .btn svg{width:20px;height:20px}
+  nav .btn{padding:10px 18px;font-size:14px}
+
+  /* hero */
+  .hero{position:relative;padding:72px 0 96px;overflow-x:clip}
+  .hero::before{content:"";position:absolute;inset:-20% -10% auto auto;width:640px;height:640px;background:radial-gradient(circle,#d2632a55,transparent 65%);filter:blur(20px);z-index:-1}
+  .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+  .tag{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:#ffffff0d;border:1px solid #ffffff1a;font-size:14px;color:var(--muted);margin-bottom:24px}
+  .tag b{color:var(--gold)}
+  .hero h1{font-size:clamp(48px,8vw,104px);font-weight:800}
+  .hero h1 em{font-style:normal;color:var(--rust);position:relative}
+  .hero h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.06em;height:.12em;background:var(--gold);border-radius:4px;z-index:-1;opacity:.85}
+  .hero p.lead{font-size:clamp(17px,2vw,20px);color:var(--muted);max-width:520px;margin:24px 0 36px}
+  .ctas{display:flex;flex-wrap:wrap;gap:14px}
+  .hero-art{position:relative;aspect-ratio:1/1.05}
+  .hero-art .main{position:absolute;inset:0 12% 10% 0;border-radius:var(--radius);overflow:hidden;transform:rotate(-3deg);box-shadow:0 30px 60px -20px #000}
+  .hero-art .main img,.hero-art .float img{width:100%;height:100%;object-fit:cover}
+  .hero-art .float{position:absolute;width:46%;aspect-ratio:1;right:0;bottom:0;border-radius:50%;overflow:hidden;border:6px solid var(--bg);outline:3px solid var(--rust);animation:bob 5s ease-in-out infinite}
+  .badge{position:absolute;top:8%;right:4%;background:var(--gold);color:#1b1307;font-family:"Bricolage Grotesque";font-weight:800;padding:12px 18px;border-radius:16px;transform:rotate(6deg);box-shadow:0 10px 30px -10px #000;font-size:15px;line-height:1.15;text-align:center}
+  @keyframes bob{50%{transform:translateY(-12px)}}
+
+  /* marquee */
+  .marquee{background:var(--rust);color:#1b0f07;overflow:hidden;transform:rotate(-1.5deg);margin:0 -20px}
+  .marquee div{display:flex;gap:48px;padding:16px 0;width:max-content;animation:slide 26s linear infinite;font-family:"Bricolage Grotesque";font-weight:800;font-size:clamp(20px,3vw,30px);text-transform:uppercase;white-space:nowrap}
+  .marquee span::after{content:"✦";margin-left:48px;color:var(--bg)}
+  @keyframes slide{to{transform:translateX(-50%)}}
+
+  /* sections */
+  section{padding:110px 0}
+  .head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:44px;flex-wrap:wrap}
+  .eyebrow{color:var(--gold);font-weight:600;text-transform:uppercase;letter-spacing:.14em;font-size:13px;margin-bottom:12px}
+  h2{font-size:clamp(36px,5vw,60px);font-weight:800}
+  .head p{color:var(--muted);max-width:380px}
+
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:260px;gap:18px}
+  .item{position:relative;border-radius:var(--radius);overflow:hidden;background:var(--card)}
+  .item img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+  .item:hover img{transform:scale(1.06)}
+  .item .lbl{position:absolute;left:14px;bottom:14px;right:14px;display:flex;justify-content:space-between;align-items:center;background:rgba(22,18,15,.78);backdrop-filter:blur(8px);padding:12px 16px;border-radius:14px}
+  .item h3{font-size:20px;font-weight:800}
+  .item .lbl a{font-size:13px;font-weight:600;color:var(--gold)}
+  .tall{grid-row:span 2}.wide{grid-column:span 2}
+
+  /* why */
+  .why{background:var(--bg2)}
+  .feats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .feat{background:var(--card);border-radius:var(--radius);padding:32px;border:1px solid #ffffff0d}
+  .feat .ico{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;font-size:26px;margin-bottom:22px}
+  .feat:nth-child(1) .ico{background:#d2632a33}.feat:nth-child(2) .ico{background:#f2b63233}.feat:nth-child(3) .ico{background:#1f8a4c44}
+  .feat h3{font-size:24px;margin-bottom:10px}
+  .feat p{color:var(--muted)}
+
+  /* workshop */
+  .shop .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+  .shop-img{border-radius:var(--radius);overflow:hidden;aspect-ratio:4/4.4}
+  .shop-img img{width:100%;height:100%;object-fit:cover}
+  .shop p{color:var(--muted);font-size:18px;margin:20px 0 30px}
+  .stats{display:flex;gap:40px;flex-wrap:wrap}
+  .stats b{display:block;font-family:"Bricolage Grotesque";font-size:44px;color:var(--ink)}
+  .stats span{color:var(--muted);font-size:14px}
+
+  /* visit */
+  .visit-card{background:linear-gradient(135deg,var(--rust),#a8441a);border-radius:32px;padding:clamp(32px,6vw,72px);display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center;color:#1b0f07;position:relative;overflow:hidden}
+  .visit-card::after{content:"";position:absolute;right:-80px;top:-80px;width:300px;height:300px;border-radius:50%;border:40px solid #ffffff1f}
+  .visit-card h2{color:#fff}
+  .visit-card p{font-size:18px;margin:16px 0 28px;color:#fff1e6}
+  .info{display:grid;gap:14px;position:relative;z-index:1}
+  .info div{background:#ffffff26;padding:18px 20px;border-radius:18px;color:#fff}
+  .info small{display:block;opacity:.8;font-size:13px;text-transform:uppercase;letter-spacing:.1em}
+  .info strong{font-size:18px}
+  .visit-card .btn-ghost{border-color:#ffffff88;color:#fff}
+
+  footer{padding:40px 0 100px;color:var(--muted);font-size:14px}
+  footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  footer a:hover{color:var(--gold)}
+
+  .fab{position:fixed;right:18px;bottom:18px;z-index:30;width:60px;height:60px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 12px 30px -8px #25d366aa;animation:pulse 2.4s infinite}
+  .fab svg{width:30px;height:30px;fill:#fff}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 #25d36688}70%{box-shadow:0 0 0 18px #25d36600}100%{box-shadow:0 0 0 0 #25d36600}}
+
+  .reveal{opacity:0;transform:translateY(30px);transition:opacity .8s,transform .8s}
+  .reveal.in{opacity:1;transform:none}
+
+  @media (max-width:900px){
+    .navlinks{display:none}
+    .hero{padding:40px 0 72px}
+    .hero .wrap,.shop .wrap,.visit-card{grid-template-columns:1fr}
+    .hero-art{max-width:460px;width:100%;margin-inline:auto}
+    .grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:200px}
+    .wide{grid-column:span 2}
+    .feats{grid-template-columns:1fr}
+    section{padding:80px 0}
+  }
+  @media (max-width:520px){
+    nav .btn span{display:none}
+    .grid{grid-auto-rows:170px;gap:12px}
+    .item .lbl{padding:8px 12px;left:8px;right:8px;bottom:8px}
+    .item h3{font-size:16px}.item .lbl a{display:none}
+  }
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="stripe"></div>
+
+<nav>
+  <div class="wrap">
+    <a href="#" class="logo"><img src="images/sofa-orange.jpg" alt="">The CraftMen</a>
+    <div class="navlinks">
+      <a href="#work">Our Work</a><a href="#why">Why Us</a><a href="#visit">Visit</a>
+    </div>
+    <a class="btn btn-wa" href="https://wa.me/233548269473?text=Hi%20CraftMen!%20I%27m%20interested%20in%20some%20furniture." target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
+      <span>WhatsApp Us</span>
+    </a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <div class="tag">🇬🇭 Made in Accra · <b>Pay on delivery</b></div>
+      <h1>Furniture that <em>hits</em> different.</h1>
+      <p class="lead">Plush sofas, tufted beds, sleek wardrobes & TV stands — built by hand in our Accra workshop and delivered to your door. You only pay when it arrives.</p>
+      <div class="ctas">
+        <a class="btn btn-wa" href="https://wa.me/233548269473?text=Hi%20CraftMen!%20I%27d%20like%20to%20place%20an%20order." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
+          Order on WhatsApp
+        </a>
+        <a class="btn btn-ghost" href="#work">See our work →</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="main"><img src="images/sofa-lshape.jpg" alt="Grey tufted L-shaped velvet sofa"></div>
+      <div class="float"><img src="images/sofa-orange.jpg" alt="Burnt orange velvet sofa"></div>
+      <div class="badge">Pay on<br>delivery ✓</div>
+    </div>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true">
+  <div>
+    <span>Sofas</span><span>Beds</span><span>Wardrobes</span><span>TV Stands</span><span>Headboards</span><span>Kitchen Cabinets</span><span>Custom Orders</span>
+    <span>Sofas</span><span>Beds</span><span>Wardrobes</span><span>TV Stands</span><span>Headboards</span><span>Kitchen Cabinets</span><span>Custom Orders</span>
+  </div>
+</div>
+
+<section id="work">
+  <div class="wrap">
+    <div class="head reveal">
+      <div><div class="eyebrow">Everything furniture</div><h2>Fresh from the workshop.</h2></div>
+      <p>Every piece is made to order. Want a different colour, size or fabric? Just tell us.</p>
+    </div>
+    <div class="grid">
+      <div class="item tall reveal"><img src="images/sofa-lshape.jpg" alt="Grey L-shaped sofa" loading="lazy"><div class="lbl"><h3>L-Shape Sofas</h3><a href="https://wa.me/233548269473?text=Hi!%20I%27m%20interested%20in%20an%20L-shape%20sofa." target="_blank" rel="noopener">Ask price →</a></div></div>
+      <div class="item wide reveal"><img src="images/bed.jpg" alt="Grey tufted upholstered bed" loading="lazy" style="object-position:center 40%"><div class="lbl"><h3>Tufted Beds</h3><a href="https://wa.me/233548269473?text=Hi!%20I%27m%20interested%20in%20a%20bed." target="_blank" rel="noopener">Ask price →</a></div></div>
+      <div class="item tall reveal"><img src="images/wardrobe.jpg" alt="Sliding-door wardrobe" loading="lazy"><div class="lbl"><h3>Wardrobes</h3><a href="https://wa.me/233548269473?text=Hi!%20I%27m%20interested%20in%20a%20wardrobe." target="_blank" rel="noopener">Ask price →</a></div></div>
+      <div class="item reveal"><img src="images/headboards.jpg" alt="Velvet button-tufted headboards" loading="lazy"><div class="lbl"><h3>Headboards</h3></div></div>
+      <div class="item reveal"><img src="images/sofa-orange.jpg" alt="Orange velvet sofa" loading="lazy"><div class="lbl"><h3>Velvet Sofas</h3></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="why" class="why">
+  <div class="wrap">
+    <div class="head reveal"><div><div class="eyebrow">Why The CraftMen</div><h2>No stress. Just vibes.</h2></div></div>
+    <div class="feats">
+      <div class="feat reveal"><div class="ico">💵</div><h3>Pay on delivery</h3><p>Within Accra you pay only when your furniture arrives and you're happy with it. Zero risk.</p></div>
+      <div class="feat reveal"><div class="ico">🛠️</div><h3>Handmade to order</h3><p>Precision-cut boards, quality foam and rich velvet — crafted by skilled hands, sized for your space.</p></div>
+      <div class="feat reveal"><div class="ico">🏬</div><h3>Showroom pickup</h3><p>Come see, touch and sit before you buy. Visit us at Kotobabi Abavana Down.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="shop">
+  <div class="wrap">
+    <div class="shop-img reveal"><img src="images/workshop.jpg" alt="Panel saw cutting boards in the CraftMen workshop"></div>
+    <div class="reveal">
+      <div class="eyebrow">Behind the scenes</div>
+      <h2>Built right here in Accra.</h2>
+      <p>From the first cut on the panel saw to the last button on the headboard, everything happens in our own workshop. Follow along on TikTok to watch pieces come to life.</p>
+      <div class="stats">
+        <div><b>1.4K+</b><span>TikTok followers</span></div>
+        <div><b>100%</b><span>Custom made</span></div>
+        <div><b>🇬🇭</b><span>Proudly Ghanaian</span></div>
+      </div>
+      <div class="ctas" style="margin-top:32px">
+        <a class="btn btn-ghost" href="https://www.tiktok.com/@thecraftmenfurniture" target="_blank" rel="noopener">Watch us on TikTok →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <div class="visit-card reveal">
+      <div>
+        <h2>Let's furnish your space.</h2>
+        <p>Send us a picture of what you want — or tell us your idea — and we'll build it.</p>
+        <div class="ctas">
+          <a class="btn btn-wa" href="https://wa.me/233548269473" target="_blank" rel="noopener">WhatsApp 054 826 9473</a>
+          <a class="btn btn-ghost" href="tel:+233548269473">Call now</a>
+        </div>
+      </div>
+      <div class="info">
+        <div><small>Showroom</small><strong>Kotobabi, Abavana Down — Accra</strong></div>
+        <div><small>Delivery</small><strong>Pay on delivery within Accra</strong></div>
+        <div><small>Call / WhatsApp</small><strong>054 826 9473</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr"></span> The CraftMen Furniture · Accra, Ghana</span>
+    <a href="https://www.tiktok.com/@thecraftmenfurniture" target="_blank" rel="noopener">@thecraftmenfurniture</a>
+  </div>
+</footer>
+
+<a class="fab" href="https://wa.me/233548269473" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
+</a>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

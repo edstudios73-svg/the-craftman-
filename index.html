@@ -231,6 +231,10 @@
   .mcol:nth-child(2) div:last-child{flex:1.25}
   .mcol:nth-child(1) div{animation-delay:.08s}.mcol:nth-child(3) div{animation-delay:.16s}
   @keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+  .mcol img{animation:drift 14s ease-in-out infinite alternate}
+  .mcol:nth-child(2) img{animation-duration:17s}
+  .mcol:nth-child(3) img{animation-delay:-6s}
+  @keyframes drift{from{transform:scale(1)}to{transform:scale(1.09)}}
   .splash::after{content:"";position:absolute;left:0;right:0;bottom:0;height:70%;background:linear-gradient(180deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.88) 36%,#fff 54%);pointer-events:none;z-index:1}
   .sp-body{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:0 28px max(28px,env(safe-area-inset-bottom));text-align:center}
   .sp-body small{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
@@ -271,9 +275,9 @@
 
 <div id="splash" class="splash" hidden aria-label="Welcome">
   <div class="mosaic">
-    <div class="mcol"><div><img src="img/t/bed-emerald.jpg" alt=""></div><div><img src="img/t/sofa-slate.jpg" alt=""></div><div><img src="img/t/wardrobe-open.jpg" alt=""></div></div>
-    <div class="mcol"><div><img src="img/t/sofa-black.jpg" alt=""></div><div><img src="img/t/fluffy-cocoa.jpg" alt=""></div></div>
-    <div class="mcol"><div><img src="img/t/tv-stand-cream.jpg" alt=""></div><div><img src="img/t/bed-taupe-channel.jpg" alt=""></div><div><img src="img/t/bed-onyx.jpg" alt=""></div></div>
+    <div class="mcol"><div><img src="img/s/emerald.jpg" alt=""></div><div><img src="img/s/blush.jpg" alt=""></div><div><img src="img/s/tv-range.jpg" alt=""></div></div>
+    <div class="mcol"><div><img src="img/s/grey-studio.jpg" alt="" fetchpriority="high"></div><div><img src="img/s/charcoal.jpg" alt=""></div></div>
+    <div class="mcol"><div><img src="img/s/onyx.jpg" alt=""></div><div><img src="img/s/cocoa.jpg" alt=""></div><div><img src="img/s/slate-sofa.jpg" alt=""></div></div>
   </div>
   <div class="sp-body">
     <h1><img class="sp-logo" src="img/logo.png" alt="The Craftmen Furniture. Craft. Soul. Legacy."></h1>

@@ -84,6 +84,7 @@
   .card .sub{font-size:14px;color:var(--soft);margin-top:2px}
   .card .ask{font-size:13px;color:var(--soft);white-space:nowrap;transition:color .2s}
   .card:hover .ask{color:var(--clay)}
+  .card .price{font-size:15px;font-weight:500;white-space:nowrap}
   .card[hidden]{display:none}
 
   /* process */
@@ -186,6 +187,7 @@
           <button aria-pressed="false" data-f="beds">Beds</button>
           <button aria-pressed="false" data-f="sofas">Sofas</button>
           <button aria-pressed="false" data-f="storage">Storage</button>
+          <button aria-pressed="false" data-f="tables">Tables</button>
         </div>
       </div>
 
@@ -196,6 +198,8 @@
         <a class="card fade" data-c="beds" data-name="Taupe channel bed"><div class="ph"><img src="img/bed-taupe-channel.jpg" alt="Taupe channel-tufted bed" loading="lazy"></div><div class="meta"><div><h3 class="serif">Taupe channel bed</h3><p class="sub">Vertical channel stitch</p></div><span class="ask">Enquire →</span></div></a>
         <a class="card fade" data-c="sofas" data-name="Slate L-shape sofa"><div class="ph"><img src="img/sofa-slate.jpg" alt="Slate grey L-shaped velvet sofa with cup holders" loading="lazy"></div><div class="meta"><div><h3 class="serif">Slate L-shape sofa</h3><p class="sub">Crystal buttons · cup holders</p></div><span class="ask">Enquire →</span></div></a>
         <a class="card fade" data-c="beds" data-name="Cream cube bed"><div class="ph"><img src="img/bed-cream-cube.jpg" alt="Cream bed with padded cube panels" loading="lazy"></div><div class="meta"><div><h3 class="serif">Cream cube bed</h3><p class="sub">Padded panel frame</p></div><span class="ask">Enquire →</span></div></a>
+        <a class="card wide fade" data-c="sofas" data-name="3-in-1 sofa" data-price="GH₵ 1,900"><div class="ph"><img src="img/sofa-black.jpg" alt="Black tufted velvet 3-in-1 sofa with gold legs" loading="lazy"></div><div class="meta"><div><h3 class="serif">3-in-1 sofa</h3><p class="sub">Black velvet · gold legs</p></div><span class="price">GH₵ 1,900</span></div></a>
+        <a class="card fade" data-c="storage" data-name="Cream TV stand"><div class="ph"><img src="img/tv-stand-cream.jpg" alt="Cream TV stand with gold legs and brass handles" loading="lazy"></div><div class="meta"><div><h3 class="serif">Cream TV stand</h3><p class="sub">Gold legs · brass pulls</p></div><span class="ask">Enquire →</span></div></a>
 
         <a class="card fade" data-c="storage" data-name="TV console"><div class="ph"><img src="img/tv-console.jpg" alt="Long TV console in white and teak finish" loading="lazy"></div><div class="meta"><div><h3 class="serif">TV console</h3><p class="sub">White &amp; teak</p></div><span class="ask">Enquire →</span></div></a>
         <a class="card wide fade" data-c="beds" data-name="Slate bed with ottoman"><div class="ph"><img src="img/bed-slate-ottoman.jpg" alt="Slate velvet channel bed with matching storage ottoman" loading="lazy"></div><div class="meta"><div><h3 class="serif">Slate bed &amp; ottoman</h3><p class="sub">Matching storage bench</p></div><span class="ask">Enquire →</span></div></a>
@@ -209,6 +213,8 @@
         <a class="card fade" data-c="storage" data-name="Two-door wardrobe"><div class="ph"><img src="img/wardrobe-closed.jpg" alt="Closed two-door sliding wardrobe" loading="lazy"></div><div class="meta"><div><h3 class="serif">Two-door wardrobe</h3><p class="sub">Brass handles</p></div><span class="ask">Enquire →</span></div></a>
         <a class="card fade" data-c="storage" data-name="Two-tier cabinet"><div class="ph"><img src="img/cabinet-tiered.jpg" alt="Two-tier oak and white cabinet" loading="lazy"></div><div class="meta"><div><h3 class="serif">Two-tier cabinet</h3><p class="sub">Oak &amp; white</p></div><span class="ask">Enquire →</span></div></a>
         <a class="card wide fade" data-c="storage" data-name="Bookshelves"><div class="ph"><img src="img/bookshelves.jpg" alt="Tall grey and mustard bookshelves" loading="lazy"></div><div class="meta"><div><h3 class="serif">Bookshelves</h3><p class="sub">Grey with mustard backing</p></div><span class="ask">Enquire →</span></div></a>
+        <a class="card fade" data-c="tables" data-name="Lilac coffee table"><div class="ph"><img src="img/table-lilac.jpg" alt="Lilac and grey open coffee table on gold legs" loading="lazy"></div><div class="meta"><div><h3 class="serif">Lilac coffee table</h3><p class="sub">Gold tapered legs</p></div><span class="ask">Enquire →</span></div></a>
+        <a class="card wide fade" data-c="storage" data-name="TV stand"><div class="ph"><img src="img/tv-stands.jpg" alt="A showroom full of TV stands in white, grey, mustard and walnut" loading="lazy"></div><div class="meta"><div><h3 class="serif">TV stands</h3><p class="sub">White, grey, mustard, walnut · many sizes</p></div><span class="ask">Enquire →</span></div></a>
       </div>
     </div>
   </section>
@@ -259,7 +265,8 @@
 
   // each card opens WhatsApp with the piece name filled in
   document.querySelectorAll('.card').forEach(c => {
-    c.href = 'https://wa.me/233548269473?text=' + encodeURIComponent("Hello CraftMen, I'm interested in the " + c.dataset.name + '. How much is it?');
+    c.href = 'https://wa.me/233548269473?text=' + encodeURIComponent("Hello CraftMen, I'm interested in the " + c.dataset.name +
+      (c.dataset.price ? ' (' + c.dataset.price + '). Is it still available?' : '. How much is it?'));
     c.target = '_blank';
     c.rel = 'noopener';
     if (c.classList.contains('wide')) c.dataset.wide = '1';

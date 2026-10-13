@@ -87,6 +87,18 @@
   .card .price{font-size:15px;font-weight:500;white-space:nowrap}
   .card[hidden]{display:none}
 
+  /* fluffy feature */
+  .fgrid{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:28px 20px}
+  .fgrid figure{display:flex;flex-direction:column}
+  .fgrid .ph{aspect-ratio:4/5;overflow:hidden;background:var(--paper-2)}
+  .fgrid figure:first-child{grid-row:span 2}
+  .fgrid figure:first-child .ph{aspect-ratio:auto;flex:1;position:relative}
+  .fgrid figure:first-child img{position:absolute;inset:0}
+  .fgrid figcaption{display:flex;justify-content:space-between;border-top:1px solid var(--ink);margin-top:12px;padding-top:10px;font-size:14px}
+  .fgrid figcaption span:last-child{color:var(--soft)}
+  .feature .intro{max-width:380px;color:var(--soft)}
+  .feature .intro .ul{color:var(--ink);display:inline-block;margin-top:14px}
+
   /* process */
   .process{background:var(--green);color:var(--paper)}
   .process .label{color:#a9b5ad}
@@ -131,6 +143,9 @@
     .card.wide .ph{aspect-ratio:4/3;flex:none}
     .card h3{font-size:20px}
     .card .ask{display:none}
+    .fgrid{grid-template-columns:1fr 1fr;gap:24px 14px}
+    .fgrid figure:first-child{grid-column:span 2;grid-row:auto}
+    .fgrid figure:first-child .ph{aspect-ratio:4/4.2;flex:none}
     .steps{grid-template-columns:1fr}
     .step,.step+.step{padding:28px 0;border-left:0;border-bottom:1px solid #ffffff2b}
     section{padding:88px 0}
@@ -150,6 +165,7 @@
     <a href="#" class="brand serif">The Craft<i>Men</i></a>
     <nav>
       <a href="#work">Work</a>
+      <a href="#fluffy">Fluffy beds</a>
       <a href="#process">How it works</a>
       <a href="#visit">Visit</a>
       <a class="cta" href="https://wa.me/233548269473" target="_blank" rel="noopener">WhatsApp</a>
@@ -215,6 +231,22 @@
         <a class="card wide fade" data-c="storage" data-name="Bookshelves"><div class="ph"><img src="img/bookshelves.jpg" alt="Tall grey and mustard bookshelves" loading="lazy"></div><div class="meta"><div><h3 class="serif">Bookshelves</h3><p class="sub">Grey with mustard backing</p></div><span class="ask">Enquire →</span></div></a>
         <a class="card fade" data-c="tables" data-name="Lilac coffee table"><div class="ph"><img src="img/table-lilac.jpg" alt="Lilac and grey open coffee table on gold legs" loading="lazy"></div><div class="meta"><div><h3 class="serif">Lilac coffee table</h3><p class="sub">Gold tapered legs</p></div><span class="ask">Enquire →</span></div></a>
         <a class="card wide fade" data-c="storage" data-name="TV stand"><div class="ph"><img src="img/tv-stands.jpg" alt="A showroom full of TV stands in white, grey, mustard and walnut" loading="lazy"></div><div class="meta"><div><h3 class="serif">TV stands</h3><p class="sub">White, grey, mustard, walnut · many sizes</p></div><span class="ask">Enquire →</span></div></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="fluffy" class="feature" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="label">Signature piece</p><h2 class="serif">Fluffy luxury<br><em style="color:var(--clay)">bed frames</em></h2></div>
+        <p class="intro">Our fluffy luxury material bed frames, padded all the way round and made in the colour you want. Price depends on size.<br><a class="ul" href="https://wa.me/233548269473?text=Hello%20CraftMen%2C%20I%27d%20like%20a%20price%20for%20the%20fluffy%20luxury%20bed%20frame.%20My%20size%20is%3A%20" target="_blank" rel="noopener">Ask for your size →</a></p>
+      </div>
+      <div class="fgrid">
+        <figure class="fade"><div class="ph"><img src="img/fluffy-cocoa.jpg" style="object-position:8% center" alt="Cocoa brown fluffy bed frame with padded surround and matching bedside drawers" loading="lazy"></div><figcaption><span>Cocoa</span><span>With bedside drawers</span></figcaption></figure>
+        <figure class="fade"><div class="ph"><img src="img/fluffy-charcoal.jpg" alt="Charcoal fluffy channel bed frame in a bedroom" loading="lazy"></div><figcaption><span>Charcoal</span><span>Channel stitch</span></figcaption></figure>
+        <figure class="fade"><div class="ph"><img src="img/fluffy-grey-studio.jpg" alt="Light grey fluffy bed frame in a showroom" loading="lazy"></div><figcaption><span>Dove grey</span><span>Low surround</span></figcaption></figure>
+        <figure class="fade"><div class="ph"><img src="img/fluffy-blush.jpg" alt="Blush pink fluffy headboard with grid stitching" loading="lazy"></div><figcaption><span>Blush</span><span>Grid headboard</span></figcaption></figure>
+        <figure class="fade"><div class="ph"><img src="img/fluffy-navy.jpg" alt="Navy fluffy headboard and side rails before assembly" loading="lazy"></div><figcaption><span>Navy</span><span>Ready to assemble</span></figcaption></figure>
       </div>
     </div>
   </section>
